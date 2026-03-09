@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+    <File Path="Dockerfile" />
+  </Folder>
+  <Project Path="BusinessLogic/BusinessLogic.csproj" Id="67131888-9fe5-4322-8f1d-4971969fd53e" />
+  <Project Path="DataAccess/DataAccess.csproj" Id="6325f853-3d0e-4aae-9f40-97d522416f7c" />
+  <Project Path="Domain/Domain.csproj" Id="1c19b66e-a849-4693-bf72-4ecc40d60ae7" />
+  <Project Path="FilmoSearchPortal.Test/FilmoSearchPortal.Tests.csproj" Id="0c67dd10-6c91-4ffa-8b86-e815a2b367e0" />
+  <Project Path="FilmoSearchPortal/FilmoSearchPortal.csproj" />
+</Solution>

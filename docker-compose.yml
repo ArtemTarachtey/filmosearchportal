@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: film-portal-db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=FilmPortalDb1
+    ports:
+      - "1433:1433"
+
+  backend:
+    image: backend 
+    container_name: film-portal-api
+    environment:
+      - ConnectionStrings__Connection=Server=db;Database=FilmPortalDb;User Id=sa;Password=FilmPortalDb1;TrustServerCertificate=True;
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5010:8080"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./FilmoSearchPortal_Frontend
+      dockerfile: Dockerfile
+    container_name: film-portal-ui
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend

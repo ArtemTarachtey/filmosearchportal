@@ -1,0 +1,167 @@
+.modal *, .modal *::before, .modal *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+}
+
+.card {
+    width: clamp(300px, 30vw, 360px);
+    height: clamp(300px, 20vh, 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    gap: .8rem;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px 2px silver;
+}
+
+.card-field {
+    display: flex; 
+    background-color: none;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    justify-content: center;
+}
+
+.film_title, .duration, .actors, .rating, .age, .stars {
+    justify-content: flex-end;
+}
+.duration::before, .stars::before, .rating::before, .age::before, .reviews::before {
+    padding-right: .3rem;
+    color: rgb(135, 135, 135);
+}
+
+.duration::before { content: "Длительность: "; }
+.duration::after { content: " минут."; padding-left: .3rem; color:  rgb(135, 135, 135); }
+.stars::before { content: "Звезд: "; }
+.rating::before { content: "Рейтинг: "; }
+.age::before { content: "Возраст: "; }
+.reviews::before { content: "Обзоры: "; }
+
+.card-actions {
+    position: absolute;
+    display: flex;
+    gap: 1rem;
+    z-index: 5000;
+    top: 5%;
+    right: 5%;
+}
+
+.edit-action {
+    background-color: rgba(50, 205, 50, 0.7); 
+}
+
+.delete-action {
+    background-color: rgba(220, 20, 60, 0.7);
+}
+
+.edit-action, .delete-action {
+    width: 1.5rem;
+    height: 1.5rem;
+    box-shadow: 0 0 10px 2px white;
+    border-radius: 50%;
+}
+
+.modal {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #242424;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 1px silver;
+    position: absolute;
+    z-index: 1000;
+    width: 30vw;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8rem;
+    padding: 1rem;
+}
+
+.modal::backdrop {
+    backdrop-filter: blur(1px);
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: -0.3rem;
+}
+
+#input-desc {
+    resize: none;
+    display: block;
+}
+
+.form-input {
+    appearance: none; 
+    width: 100% !important;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgba(36, 36, 36, 0.1);
+    border: none;
+    box-shadow: 0 0 10px 1px silver;
+    padding: .5rem;
+    border-radius: 4px;
+}
+
+.form-input option {
+    background-color: #2c2c2c;
+    color: white;              
+}
+
+.form-input {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#input-title, #input-duration {
+    text-align: right;
+}
+
+.btn {
+    width: 6rem;
+    height: 2rem;
+    border-radius: .5rem;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    box-shadow: 0 0 10px 1px silver;
+}
+
+.form-options {
+    color: white;
+}
+
+.add-btn {
+    font-size: 2.4rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: #242424;
+    box-shadow: 0 0 10px 2px silver;
+    color: white;
+    position: fixed;
+    z-index: 5000;
+    bottom: 5rem;
+    right: 5rem;
+}
