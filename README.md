@@ -1,6 +1,6 @@
 # FilmoSearchPortal
 
-Портал для поиска и обзора фильмов, построенный на связке ASP.NET Core и React (Vite).
+Портал для поиска и обзора фильмов, построенный на связке ASP.NET Core и React.
 
 ## Описание
 
@@ -8,7 +8,7 @@
 - **URL:** [http://localhost:5010/](http://localhost:5010/)
 - **Swagger (API Documentation):** [http://localhost:5010/swagger/index.html](http://localhost:5010/swagger/index.html)
 
-### 2. Фронтенд (React + Vite)
+### 2. Фронтенд (React)
 - **URL:** [http://localhost:5174/](http://localhost:5174/)
 
 ##  Архитектура проекта
@@ -16,7 +16,7 @@
 - **FilmoSearchPortal**: API Контроллеры и настройки.
 - **BusinessLogic**: Сервисы и бизнес-логика.
 - **DataAccess**: Контекст базы данных, конфигурации и миграции.
-- **Domain**: Сущности (Entities) и объекты передачи данных (DTO).
+- **Domain**: Сущности и объекты передачи данных.
 - **FilmoSearchPortal_Frontend**: Клиентская часть на React.
 - **FilmoSearchPortal.Test**: Модульные тесты.
 
